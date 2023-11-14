@@ -17,6 +17,9 @@ const { viewResources, addResource } = require('./utils/ResourceUtil')
 app.get('/view-resources', viewResources);
 app.post('/add-resource', addResource);
 
+const { viewResources } = require('./utils/ResourceUtil')
+app.get('/view-resources', viewResources);
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
